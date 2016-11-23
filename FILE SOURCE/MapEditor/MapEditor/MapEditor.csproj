@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BF4DC8A-A3A9-4EDB-93DD-E0BE38AEDF5A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MapEditor</RootNamespace>
+    <AssemblyName>MapEditor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomCursor.cs" />
+    <Compile Include="MapEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapEditor.Designer.cs">
+      <DependentUpon>MapEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddState.Designer.cs">
+      <DependentUpon>AddState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuadTree.cs" />
+    <Compile Include="WorldMap.cs" />
+    <EmbeddedResource Include="MapEditor.resx">
+      <DependentUpon>MapEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddState.resx">
+      <DependentUpon>AddState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\boss\Thumbs.db" />
+    <None Include="Resources\enemy\Thumbs.db" />
+    <None Include="Resources\ground\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\boss\boss_bat.png" />
+    <Content Include="Resources\boss\boss_medusa.png" />
+    <Content Include="Resources\boss\simon.png" />
+    <Content Include="Resources\enemy\enemy_bat.png" />
+    <Content Include="Resources\enemy\enemy_bonepillar.png" />
+    <Content Include="Resources\enemy\enemy_ghost.png" />
+    <Content Include="Resources\enemy\enemy_medusahead.png" />
+    <Content Include="Resources\enemy\enemy_merman.png" />
+    <Content Include="Resources\enemy\enemy_panther.png" />
+    <Content Include="Resources\enemy\enemy_spearguard.png" />
+    <Content Include="Resources\enemy\enemy_zombie.png" />
+    <Content Include="Resources\ground\ground_brick.png" />
+    <Content Include="Resources\ground\ground_death.png" />
+    <Content Include="Resources\ground\ground_firecandle.png" />
+    <Content Include="Resources\ground\ground_firetower.png" />
+    <Content Include="Resources\ground\ground_go_in_castle.png" />
+    <Content Include="Resources\ground\ground_hidden_brick.png" />
+    <Content Include="Resources\ground\ground_lockdoor.png" />
+    <Content Include="Resources\ground\ground_moving_brick.png" />
+    <Content Include="Resources\ground\ground_next.png" />
+    <Content Include="Resources\ground\ground_opendoor.png" />
+    <Content Include="Resources\ground\ground_trap.png" />
+    <Content Include="Resources\ground\ground_stair_down.png" />
+    <Content Include="Resources\ground\ground_stair_up.png" />
+    <Content Include="Resources\item\eraser.png" />
+    <Content Include="Resources\item\item_axe.png" />
+    <Content Include="Resources\item\item_big_heart.png" />
+    <Content Include="Resources\item\item_cross.png" />
+    <Content Include="Resources\item\item_double_shot.png" />
+    <Content Include="Resources\item\item_holy_water.png" />
+    <Content Include="Resources\item\item_knife.png" />
+    <Content Include="Resources\item\item_money_bag.png" />
+    <Content Include="Resources\item\item_morning_star.png" />
+    <Content Include="Resources\item\item_none.png" />
+    <Content Include="Resources\item\item_roast.png" />
+    <Content Include="Resources\item\item_rosary.png" />
+    <Content Include="Resources\item\item_small_heart.png" />
+    <Content Include="Resources\item\item_spirit_ball.png" />
+    <Content Include="Resources\item\item_stop_watch.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

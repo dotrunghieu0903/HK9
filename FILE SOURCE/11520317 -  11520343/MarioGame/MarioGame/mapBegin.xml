@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<SaveData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Width>1600</Width>
+  <Height>600</Height>
+  <Nodes>
+    <Node ID="1" X="0" Y="1600" Width="1600" Height="1600">
+      <GameObjects />
+    </Node>
+    <Node ID="9" X="0" Y="1600" Width="800" Height="800">
+      <GameObjects>
+        <GameObject ID="25" Type="6" X="145" Y="558" />
+        <GameObject ID="26" Type="15" X="85" Y="508" />
+        <GameObject ID="27" Type="15" X="291" Y="504" />
+        <GameObject ID="28" Type="14" X="218" Y="467" />
+      </GameObjects>
+    </Node>
+    <Node ID="10" X="800" Y="1600" Width="800" Height="800">
+      <GameObjects />
+    </Node>
+    <Node ID="11" X="0" Y="800" Width="800" Height="800">
+      <GameObjects>
+        <GameObject ID="0" Type="18" X="507" Y="524" />
+        <GameObject ID="1" Type="18" X="692" Y="376" />
+        <GameObject ID="2" Type="36" X="260" Y="379" />
+        <GameObject ID="3" Type="41" X="135" Y="429" />
+        <GameObject ID="4" Type="1" X="389" Y="311" />
+        <GameObject ID="5" Type="16" X="443" Y="229" />
+        <GameObject ID="6" Type="16" X="443" Y="279" />
+        <GameObject ID="7" Type="16" X="389" Y="499" />
+        <GameObject ID="8" Type="24" X="754" Y="77" />
+        <GameObject ID="9" Type="44" X="389" Y="228" />
+        <GameObject ID="10" Type="20" X="594" Y="135" />
+        <GameObject ID="11" Type="43" X="377" Y="128" />
+        <GameObject ID="12" Type="16" X="285" Y="379" />
+        <GameObject ID="13" Type="16" X="85" Y="329" />
+        <GameObject ID="14" Type="16" X="135" Y="329" />
+        <GameObject ID="15" Type="16" X="185" Y="329" />
+        <GameObject ID="16" Type="16" X="235" Y="329" />
+        <GameObject ID="17" Type="16" X="285" Y="329" />
+        <GameObject ID="18" Type="16" X="335" Y="329" />
+        <GameObject ID="19" Type="16" X="85" Y="379" />
+        <GameObject ID="20" Type="2" X="226" Y="375" />
+        <GameObject ID="21" Type="7" X="85" Y="429" />
+        <GameObject ID="22" Type="23" X="291" Y="429" />
+        <GameObject ID="23" Type="11" X="195" Y="558" />
+        <GameObject ID="24" Type="12" X="245" Y="558" />
+        <GameObject ID="25" Type="6" X="145" Y="558" />
+        <GameObject ID="26" Type="15" X="85" Y="508" />
+        <GameObject ID="27" Type="15" X="291" Y="504" />
+        <GameObject ID="28" Type="14" X="218" Y="467" />
+      </GameObjects>
+    </Node>
+    <Node ID="12" X="800" Y="800" Width="800" Height="800">
+      <GameObjects>
+        <GameObject ID="8" Type="24" X="754" Y="77" />
+        <GameObject ID="10" Type="20" X="594" Y="135" />
+      </GameObjects>
+    </Node>
+  </Nodes>
+</SaveData>

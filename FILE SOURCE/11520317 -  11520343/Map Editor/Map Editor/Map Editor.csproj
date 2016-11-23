@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA22D6C8-0C13-4038-B8D7-3863E2B46613}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Map_Editor</RootNamespace>
+    <AssemblyName>Map Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Alignment.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="LoadSave.cs" />
+    <Compile Include="Management.cs" />
+    <Compile Include="QNode.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NewMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewMap.xaml.cs">
+      <DependentUpon>NewMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OImage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other\Bar.png" />
+    <Resource Include="Images\Other\Block.png" />
+    <Resource Include="Images\Other\CarnivorousFlower.png" />
+    <Resource Include="Images\Other\Cloud.png" />
+    <Resource Include="Images\Enemy\Enemy.png" />
+    <Resource Include="Images\Other\Fence.png" />
+    <Resource Include="Images\Enemy\FlyingTurtle.png" />
+    <Resource Include="Images\Other\Grass.png" />
+    <Resource Include="Images\Other\HorizontalPipe.png" />
+    <Resource Include="Images\Other\Lamp.png" />
+    <Resource Include="Images\Other\Land.png" />
+    <Resource Include="Images\Other\LeftLand.png" />
+    <Resource Include="Images\Other\Mountain.png" />
+    <Resource Include="Images\Other\Pipe.png" />
+    <Resource Include="Images\Other\RightLand.png" />
+    <Resource Include="Images\Other\Sign.png" />
+    <Resource Include="Images\Mario\SmallMario.png" />
+    <Resource Include="Images\Other\Tower.png" />
+    <Resource Include="Images\Other\Tree.png" />
+    <Resource Include="Images\Enemy\Turtle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other\CarnivorousFlowerPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other\Brick.png" />
+    <Resource Include="Images\Other\CreepPipe.png" />
+    <Resource Include="Images\Other\Tree2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bonus\FlowerBlock.png" />
+    <Resource Include="Images\Bonus\LifeMushroomBlock.png" />
+    <Resource Include="Images\Bonus\MushroomBlock.png" />
+    <Resource Include="Images\Bonus\StarBlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bonus\Coin.png" />
+    <Resource Include="Images\Bonus\CoinBlock.png" />
+    <Resource Include="Images\Bonus\CoinBrick.png" />
+    <Resource Include="Images\Bonus\Flower.png" />
+    <Resource Include="Images\Bonus\LifeMushroom.png" />
+    <Resource Include="Images\Bonus\Mushroom.png" />
+    <Resource Include="Images\Bonus\Star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other\GoDownBar.png" />
+    <Resource Include="Images\Other\GoUpBar.png" />
+    <Resource Include="Images\Other\HorizontalBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other\Machine.png" />
+    <Resource Include="Images\Other\Spring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Enemy\Turtle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other\CreepPipe1.png" />
+    <Resource Include="Images\Other\CreepPipe2.png" />
+    <Resource Include="Images\Other\HorizontalPipe1.png" />
+    <Resource Include="Images\Other\HorizontalPipe2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other\CreepUpPipe1.png" />
+    <Resource Include="Images\Other\CreepUpPipe2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other\FlagPosition.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
